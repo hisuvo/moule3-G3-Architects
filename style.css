@@ -125,10 +125,10 @@ h6 {
 
 /* font size style */
 .fs-900 {
-  font-size: var(--fs-900);
+  font-size: clamp(2rem, 5vw, var(--fs-900));
 }
 .fs-800 {
-  font-size: var(--fs-800);
+  font-size: clamp(1.3rem, 3vw, var(--fs-800));
 }
 .fs-700 {
   font-size: var(--fs-700);
@@ -148,6 +148,23 @@ h6 {
   font-weight: 600;
 }
 
+/* text align ment */
+.txt-aln {
+  text-align: center;
+}
+
+/* button style */
+.btn-primary {
+  border: none;
+  outline: none;
+  background-color: var(--clr-orange);
+  color: (var(--clr-white));
+  font-size: var(--fs-700);
+  padding: 0.8rem 1.3rem;
+  font-weight: var(--fw-semibold);
+  border-radius: 6px;
+}
+
 /* flexbox style */
 
 .flx {
@@ -164,7 +181,12 @@ h6 {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  width: 97%;
 }
+
+/* ------------------ */
+/*  Main style start  */
+/* ------------------ */
 
 /* header paer start */
 header {
@@ -172,22 +194,39 @@ header {
 }
 
 /* nav style start */
-/* .nav {
-  font-size: var(--fs-700);
-  font-weight: var(--fw-bold);
-} */
 
-.navbar .flx {
-  justify-content: space-between;
-  align-items: center;
-}
-
+.navbar .flx,
 .nav-links {
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
 }
 
+.nav-links > * + * {
+  margin-left: 1rem;
+}
 /* nav style end */
+
+/* Banner related style start */
+.banner-content {
+  max-width: 862px;
+  margin: 6rem auto 2.5rem;
+}
+
+.banner-title {
+  margin-bottom: 1rem;
+}
+.banner-txt {
+  margin-bottom: 1.9rem;
+  line-height: 26px;
+}
+
+/* Banner related style end */
+
+@media screen and (max-width: 576px) {
+  .navbar .flx,
+  .nav-links {
+    flex-direction: column;
+  }
+}
 
 /* header paer end */
