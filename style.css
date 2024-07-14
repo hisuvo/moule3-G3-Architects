@@ -158,10 +158,10 @@ h6 {
   border: none;
   outline: none;
   background-color: var(--clr-orange);
-  color: (var(--clr-white));
+  color: var(--clr-white);
   font-size: var(--fs-700);
   padding: 0.8rem 1.3rem;
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-medum);
   border-radius: 6px;
 }
 
@@ -219,13 +219,15 @@ header {
   margin-bottom: 1.9rem;
   line-height: 26px;
 }
-
 /* Banner related style end */
 
 @media screen and (max-width: 576px) {
   .navbar .flx,
   .nav-links {
     flex-direction: column;
+  }
+  .banner-content {
+    margin: 2rem auto;
   }
 }
 
