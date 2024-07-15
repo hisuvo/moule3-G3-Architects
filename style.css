@@ -280,36 +280,43 @@ main section{
 /* teams related style end */
 
 /* Love and enjoy feature related style start */
+.feature{
+  gap: 140px;
+  align-items: center;
+}
 
 .feature-content-container{
-  max-width: 586px;
+  max-width: 580px;
 }
 
-.feature-image-container{
-  max-width: 800px;
+.feature-title{
+  border-left: 5px solid var(--clr-orange);
+  padding-left: 1.513rem ;
+  margin-bottom: 1.5rem;
 }
 
-.feature-image-contaienr-img{
-  max-width: 708px;
+.feature-description{
+  line-height: 26px;
+  margin-bottom: 1.9rem;
 }
 
-.feature-image-contaienr-text{
-  position: relative;
-  left: -25px;
-  bottom: 80px;
-  max-width: 342px;
-  text-align: center;
-  padding: 45px 0;
-  border-radius: 0.5rem;
+.feature-content-card-item{
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  padding: 1.9rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
 }
 
-.feature-image-contaienr-text h1{
-  line-height: 70px;
+
+.feature-image-contaienr-img img{
+  width: 100%
 }
-.feature-image-contaienr-text p{
-  line-height: 40px;
-  font-size: 1.6rem;
-}
+
+ #feature-btn{
+  padding:2.8125rem  2.625rem;
+  margin-top: -7.1rem;
+  margin-left: -7.1rem;
+ }
 
 /* Love and enjoy feature related style  end */
 
@@ -356,7 +363,7 @@ main section{
 
 .sponsor-icons-container{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: space-between;
   gap: 2rem;
 }
@@ -409,6 +416,16 @@ footer{
     gap: 1rem;
   }
 
+  /* feature style */
+
+  .feature{
+    flex-direction: column-reverse;
+  }
+  #feature-btn{
+    padding:1rem;
+    margin-top: -7.2rem;
+    margin-left: 0;
+   }
 
   /* Some Fact related style */
   .fact-number-container{
@@ -441,6 +458,18 @@ footer{
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+
+  /* feature style */
+
+  .feature{
+    flex-direction: column;
+  }
+  #feature-btn{
+    padding:2rem;
+    margin-top: -7.2rem;
+    margin-left: 0;
+   }
+  
   
   /* Some Fact related style */
   .fact-number-container{
@@ -457,9 +486,3 @@ footer{
 
 }
 
-
-
-
-.hidden{
-  display: none;
-}
