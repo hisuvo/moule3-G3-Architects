@@ -101,8 +101,8 @@ h6 {
 .clr-2 {
   color: var(--clr-dark2);
 }
-.clr-4 {
-  color: var(--clr-dark4);
+.clr-3 {
+  color: var(--clr-dark3);
 }
 .clr-4 {
   color: var(--clr-dark4);
@@ -128,7 +128,7 @@ h6 {
   font-size: clamp(2rem, 5vw, var(--fs-900));
 }
 .fs-800 {
-  font-size: clamp(1.3rem, 3vw, var(--fs-800));
+  font-size: clamp(1.3rem, 4vw, var(--fs-800));
 }
 .fs-700 {
   font-size: var(--fs-700);
@@ -159,11 +159,12 @@ h6 {
   outline: none;
   background-color: var(--clr-orange);
   color: var(--clr-white);
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
   padding: 0.8rem 1.3rem;
   font-weight: var(--fw-medum);
   border-radius: 6px;
 }
+
 
 /* flexbox style */
 
@@ -182,6 +183,7 @@ h6 {
   max-width: 1440px;
   margin: 0 auto;
   width: 97%;
+  border: 1px solid red;
 }
 
 /* ------------------ */
@@ -220,15 +222,95 @@ header {
   line-height: 26px;
 }
 /* Banner related style end */
+/* header paer end */
+
+
+/* -------------------- */
+/* Main part style start */
+/* -------------------- */
+main{
+  margin: 5.3125rem;
+}
+
+main section{
+  margin-block-end: 7.25rem;
+}
+
+/* teams related style start */
+.teams{
+  justify-content: center;
+  align-items: center;
+  gap: 4.1rem;
+  padding: 3.7rem;
+}
+
+.team-image-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.team-image-content img{
+  width: 342px;
+  transition: 3000ms;
+}
+
+.team-image-content img:hover{
+  transform: scale(1.03);
+}
+
+
+.team-features-content{
+  max-width: 537px;
+}
+
+.tean-features-title{
+  /* font-size: ; */
+}
+.team-features-description{
+  line-height: 26px;
+  margin-block: 1.5rem 2rem;
+}
+
+
+/* teams related style end */
+
+
+
+
+
+
+
 
 @media screen and (max-width: 576px) {
+  /* Navigation related style */
   .navbar .flx,
   .nav-links {
     flex-direction: column;
   }
+/* Banner related style */
   .banner-content {
     margin: 2rem auto;
   }
+/* tean relate style */
+  .teams{
+    flex-direction: column;
+  }
 }
 
-/* header paer end */
+@media screen and (min-width: 576px) and (max-width: 992px){
+  /* Teams related style */
+  .teams{
+    flex-direction: column-reverse;
+    gap: 1rem;
+    text-align: center;
+  }
+  .team-image-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+
+}
